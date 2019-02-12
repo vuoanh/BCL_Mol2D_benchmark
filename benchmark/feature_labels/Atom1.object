@@ -1,0 +1,7 @@
+Combine(
+  UMol2D(
+  atom hashing type=Atom,
+  feature size=574,
+  Atom environment height=1
+  ) 
+)

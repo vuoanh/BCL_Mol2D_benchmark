@@ -1,0 +1,7 @@
+Combine(
+    	MolPrint2D(
+      	atom hashing type=Atom,
+      	feature size=8080,
+	Atom environment height=2
+      	) 
+)

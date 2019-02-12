@@ -9,8 +9,32 @@ Follow the instruction on [this page](http://meilerlab.org/index.php/servers/bcl
 
 ## 2. Benchmark different descriptor configurations in QSAR tasks
 
-Download the smi string file of nine PubChem datasets [here](http://www.meilerlab.org/jobs/downloadfile/name/qsar_benchmark_smiles.zip). Convert the smi string files to SDF files with 3D conformation using OpenBabel and Corrina as described in the method section of the paper.
+In the `benchmark` directory:
+### Make dataset bin files
+- Download the smi string file of nine PubChem datasets [here](http://www.meilerlab.org/jobs/downloadfile/name/qsar_benchmark_smiles.zip). Convert the smi string files to SDF files with 3D conformation using OpenBabel and Corrina as described in the method section of the paper. 
+Store the sdf files in the `data` folder. 
 
+- In the `data` folder, make the bin data files by running:
 
+```
+./make_bin_files.sh
+```
+
+### Train the QSAR models
+
+Train and benchmark the QSAR models with different descriptor configurations by running this script:
+
+```
+qsar_train.sh
+```
+
+The computational jobs can be performed locally or on computer cluster via srun (see the script)
 
 ## 3.Sensitivity analysis
+In the `sensitivity_analysis folder`:
+
+Compute the decrement and increment dervatives of different atom environments for each active and inactive compound by running:
+
+```
+./compute_sensitivity_scores.sh
+```

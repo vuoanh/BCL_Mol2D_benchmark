@@ -5,8 +5,8 @@ This repo contains scripts to perform the benchmark and sensitivity analysis in 
 
 The Bio Chemical Library (BCL) is a software package that provides a suite of cheminformatics tools that allow construction of quantitative structure-activity-relation (QSAR) models for virtual screening, pharmacophore mapping, and drug design.
 
-BCL executible file can be download (here)[http://meilerlab.org/index.php/bclcommons/show/b_apps_id/1]
+BCL executible file can be download (here) [http://meilerlab.org/index.php/bclcommons/show/b_apps_id/1]
 
-Follow the instruction on (this page)[http://meilerlab.org/index.php/servers/bcl-academic-license] to obtain access to the source code of BCL.
+Follow the instruction on (this page) [http://meilerlab.org/index.php/servers/bcl-academic-license] to obtain access to the source code of BCL.
 
 2. 

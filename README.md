@@ -11,7 +11,7 @@ Follow the instruction on [this page](http://meilerlab.org/index.php/servers/bcl
 
 In the `benchmark` folder:
 ### Make dataset bin files
-- Download the smi string file of nine PubChem datasets [here](http://www.meilerlab.org/jobs/downloadfile/name/qsar_benchmark_smiles.zip). Convert the smi string files to SDF files with 3D conformation using OpenBabel and Corrina as described in the method section of the paper. 
+- Download the smi string file of nine PubChem datasets [here](http://www.meilerlab.org/jobs/downloadfile/name/qsar_benchmark_smiles.zip). Convert the smi string files to SDF files with 3D conformation using OpenBabel and Corina as described in the method section of the paper. 
 Store the sdf files in the `data` folder. 
 
 - In the `data` folder, make the bin data files by running:

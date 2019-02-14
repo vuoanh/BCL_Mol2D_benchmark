@@ -12,7 +12,7 @@ cpu_n=10
 cat sdf.lst| xargs -n1 -I@ -P $cpu_n $bcl descriptor:GenerateDataset -source 'SdfFile(filename=@.sdf)' -feature_labels Atom1.object -result_labels '0' -output @.bin
 
 #compute increment derivatives
-cat sdf.lst | xargs -n1 -I@ -P $cpu_n $bcl descriptor:ScoreDataset -source 'Subset(filename=@.bin)' -output @_increment.score -opencl Disable -score 'InputSensitivityDiscrete(derivative=Increment,storage=File(directory=qsar_2689, prefix=model), weights=(consistency=0.0,square=0.0,absolute=0.0,utility=0.0,average=1.0,consistency best=0.0,balance=False,categorical=False))' -scheduler PThread 10  -feature_labels Atom1.object
+cat sdf.lst | xargs -n1 -I@ -P $cpu_n $bcl descriptor:ScoreDataset -source 'Subset(filename=@.bin)' -output @_increment.score -opencl Disable -score 'InputSensitivityDiscrete(derivative=Increment,storage=File(directory=qsar_2689, prefix=model), weights=(consistency=0.0,square=0.0,absolute=0.0,utility=0.0,average=1.0,consistency best=0.0,balance=False,categorical=False))' -feature_labels Atom1.object
 
 #compute decrement derivatives
-cat sdf.lst | xargs -n1 -I@ -P $cpu_n $bcl descriptor:ScoreDataset -source 'Subset(filename=@.bin)' -output @_decrement.score -opencl Disable -score 'InputSensitivityDiscrete(derivative=Decrement,storage=File(directory=qsar_2689, prefix=model), weights=(consistency=0.0,square=0.0,absolute=0.0,utility=0.0,average=1.0,consistency best=0.0,balance=False,categorical=False))' -scheduler PThread 10  -feature_labels Atom1.object
+cat sdf.lst | xargs -n1 -I@ -P $cpu_n $bcl descriptor:ScoreDataset -source 'Subset(filename=@.bin)' -output @_decrement.score -opencl Disable -score 'InputSensitivityDiscrete(derivative=Decrement,storage=File(directory=qsar_2689, prefix=model), weights=(consistency=0.0,square=0.0,absolute=0.0,utility=0.0,average=1.0,consistency best=0.0,balance=False,categorical=False))' -feature_labels Atom1.object
